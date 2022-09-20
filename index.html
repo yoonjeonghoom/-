@@ -11,10 +11,14 @@
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
         <style>
+
             @import url('https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap');
+            
             body {
                 font-family: 'Yeon Sung', cursive;
             }
+            
+            
             .header_style {
                 display: flex;
                 flex-direction: row;
@@ -28,6 +32,12 @@
                 margin-bottom: 20px;
                 margin-top: 10px;
             }
+
+
+            .header_h1 > a {
+                text-decoration: none;
+                color: black;
+            }
             
             
             .header_ul1 {
@@ -37,6 +47,14 @@
                 list-style: none;
                 text-align: center;
             }
+ 
+            .header_ul1 > li {
+                margin-left: 60px;
+                margin-right: 60px;
+                margin-top: 20px;
+                font-size: x-large;
+            }
+            
             
             .header_ul2 {
                 display: flex;
@@ -47,18 +65,20 @@
             }
 
 
-            .header_ul1 > li {
-                margin-left: 60px;
-                margin-right: 60px;
-                margin-top: 20px;
-                font-size: x-large;
-            }
-
 
             .header_ul2 > li {
                 margin-left: 10px;
                 margin-right: 10px;
                 margin-top: 20px;
+
+                text-decoration: none;
+                color: black; 
+            }
+
+
+            .header_ul2 > li > a {
+                text-decoration: none;
+                color: black; 
             }
 
 
@@ -100,17 +120,21 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
-                text-align: center;
+                text-align: left;
                 position: absolute;
                 top: 100px;
+                z-index: 1;
+
+                visibility: hidden;
             }
 
 
             .drop_flex {
                 width: 100%;
+                margin: 0px;
 
                 display: flex;
-                flex-direction: column;
+                flex-direction:row;
                 justify-content: space-between;
                 text-align: center;
             }
@@ -121,15 +145,35 @@
                 margin-top: 30px;
                 font-size: x-large;
             }
+
+
+            .drop_div > a{
+                text-decoration: none;
+                color: black;
+            }
+
+
+            
+            .dropdown > a {
+                text-decoration: none;
+                color: black; 
+            }
+
+
+        
+            .dropdown:hover .drop_div {
+                visibility: visible;
+            }
+            
         </style>
     </head>
     <body>
         <header class="header_style">
-            <h1 class="header_h1">커피에 미친 남자</h1>
+            <h1 class="header_h1"><a href="#">커피에 미친 남자</a></h1>
             <div class="header_div1">
                 <ul class="header_ul1">
                     <div class="drop_flex">
-                        <li class="dropdown">추천원두</li>
+                        <li class="dropdown"><a href="추천원두.html">추천원두</a></li>
                         <div class="drop_div">
                             <a href="#">베스트 10</a>
                             <a href="#">첫구매 추천</a>
@@ -138,7 +182,7 @@
                         </div>
                     </div>
                     <div class="drop_flex">
-                        <li class="dropdown">원두커피</li>
+                        <li class="dropdown"><a href="#">원두커피</a></li>
                         <div class="drop_div">
                             <a href="#">블렌드 커피</a>
                             <a href="#">나라별 커피</a>
@@ -147,21 +191,21 @@
                         </div>
                     </div>
                     <div class="drop_flex">
-                        <li class="dropdown">콜드블루</li>
+                        <li class="dropdown"><a href="#">콜드블루</a></li>
                         <div class="drop_div">
                             <a href="#">페트형</a>
                             <a href="#">스틱형</a>
                         </div>
                     </div>
                     <div class="drop_flex">
-                        <li class="dropdown">선물세트</li>
+                        <li class="dropdown"><a href="#">선물세트</a></li>
                         <div class="drop_div">
                             <a href="#">원두 선물세트</a>
                             <a href="#">콜드블루 선물세트</a>
                         </div>
                     </div>
                     <div class="drop_flex">
-                        <li class="dropdown">커피용품</li>
+                        <li class="dropdown"><a href="#">커피용품</a></li>
                         <div class="drop_div">
                             <a href="#">핸드드립 용품</a>
                             <a href="#">커피추출 용품</a>
@@ -173,10 +217,10 @@
             </div>
             <div class="header_div2">
                 <ul class="header_ul2">
-                    <li>이벤트</li>
-                    <li>로그인</li>
-                    <li>회원가입</li>
-                    <li>고객센터</li>
+                    <li><a href="#">이벤트</a></li>
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                    <li><a href="#">고객센터</a></li>
                     <li><i class="fa-solid fa-bag-shopping"></i></li>
                     <li><i class="fa-solid fa-magnifying-glass"></i></li>
                     <li inputmode="b">
